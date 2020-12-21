@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE72739E2586E4BB00439DBC /* NimanderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE72739D2586E4BB00439DBC /* NimanderApp.swift */; };
+		FE7273A22586E4BC00439DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7273A12586E4BC00439DBC /* Assets.xcassets */; };
+		FE7273A52586E4BC00439DBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7273A42586E4BC00439DBC /* Preview Assets.xcassets */; };
+		FE7273B12586E4BC00439DBC /* NimanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273B02586E4BC00439DBC /* NimanderTests.swift */; };
+		FE7273BC2586E4BC00439DBC /* NimanderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273BB2586E4BC00439DBC /* NimanderUITests.swift */; };
+		FE7273D12586EC0600439DBC /* AppModels in Frameworks */ = {isa = PBXBuildFile; productRef = FE7273D02586EC0600439DBC /* AppModels */; };
+		FE7273D32586EC0600439DBC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE7273D22586EC0600439DBC /* Core */; };
+		FE7273E02588308F00439DBC /* BookmarkSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */; };
+		FE7273E92588311F00439DBC /* BookmarkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273E82588311F00439DBC /* BookmarkStore.swift */; };
+		FE7273F22588352F00439DBC /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F12588352F00439DBC /* BookmarkListView.swift */; };
+		FE7273F72588355A00439DBC /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F62588355A00439DBC /* BookmarkView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE7273AD2586E4BC00439DBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE7273922586E4BB00439DBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE7273992586E4BB00439DBC;
+			remoteInfo = Nimander;
+		};
+		FE7273B82586E4BC00439DBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE7273922586E4BB00439DBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE7273992586E4BB00439DBC;
+			remoteInfo = Nimander;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE72739A2586E4BB00439DBC /* Nimander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimander.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE72739D2586E4BB00439DBC /* NimanderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimanderApp.swift; sourceTree = "<group>"; };
+		FE7273A12586E4BC00439DBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE7273A42586E4BC00439DBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE7273A62586E4BC00439DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7273A72586E4BC00439DBC /* Nimander.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nimander.entitlements; sourceTree = "<group>"; };
+		FE7273AC2586E4BC00439DBC /* NimanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE7273B02586E4BC00439DBC /* NimanderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimanderTests.swift; sourceTree = "<group>"; };
+		FE7273B22586E4BC00439DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7273B72586E4BC00439DBC /* NimanderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimanderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE7273BB2586E4BC00439DBC /* NimanderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimanderUITests.swift; sourceTree = "<group>"; };
+		FE7273BD2586E4BC00439DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkSidebar.swift; sourceTree = "<group>"; };
+		FE7273E82588311F00439DBC /* BookmarkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkStore.swift; sourceTree = "<group>"; };
+		FE7273F12588352F00439DBC /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
+		FE7273F62588355A00439DBC /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE7273972586E4BB00439DBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7273D12586EC0600439DBC /* AppModels in Frameworks */,
+				FE7273D32586EC0600439DBC /* Core in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE7273A92586E4BC00439DBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE7273B42586E4BC00439DBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE7273912586E4BB00439DBC = {
+			isa = PBXGroup;
+			children = (
+				FE72739C2586E4BB00439DBC /* Nimander */,
+				FE7273AF2586E4BC00439DBC /* NimanderTests */,
+				FE7273BA2586E4BC00439DBC /* NimanderUITests */,
+				FE72739B2586E4BB00439DBC /* Products */,
+				FE7273CF2586EC0600439DBC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE72739B2586E4BB00439DBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE72739A2586E4BB00439DBC /* Nimander.app */,
+				FE7273AC2586E4BC00439DBC /* NimanderTests.xctest */,
+				FE7273B72586E4BC00439DBC /* NimanderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE72739C2586E4BB00439DBC /* Nimander */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273A72586E4BC00439DBC /* Nimander.entitlements */,
+				FE7273A32586E4BC00439DBC /* Preview Content */,
+				FE7273D42586EC2000439DBC /* Support */,
+				FE7273D52586EC2A00439DBC /* Scenes */,
+			);
+			path = Nimander;
+			sourceTree = "<group>";
+		};
+		FE7273A32586E4BC00439DBC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273A42586E4BC00439DBC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE7273AF2586E4BC00439DBC /* NimanderTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273B02586E4BC00439DBC /* NimanderTests.swift */,
+				FE7273B22586E4BC00439DBC /* Info.plist */,
+			);
+			path = NimanderTests;
+			sourceTree = "<group>";
+		};
+		FE7273BA2586E4BC00439DBC /* NimanderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273BB2586E4BC00439DBC /* NimanderUITests.swift */,
+				FE7273BD2586E4BC00439DBC /* Info.plist */,
+			);
+			path = NimanderUITests;
+			sourceTree = "<group>";
+		};
+		FE7273CF2586EC0600439DBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE7273D42586EC2000439DBC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273A12586E4BC00439DBC /* Assets.xcassets */,
+				FE7273A62586E4BC00439DBC /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FE7273D52586EC2A00439DBC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273D72586EC7F00439DBC /* Bookmarks */,
+				FE7273D62586EC4C00439DBC /* App */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FE7273D62586EC4C00439DBC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE72739D2586E4BB00439DBC /* NimanderApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FE7273D72586EC7F00439DBC /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273E72588311500439DBC /* Store */,
+				FE7273DE2588308000439DBC /* Views */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		FE7273DE2588308000439DBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */,
+				FE7273F12588352F00439DBC /* BookmarkListView.swift */,
+				FE7273F62588355A00439DBC /* BookmarkView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FE7273E72588311500439DBC /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273E82588311F00439DBC /* BookmarkStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE7273992586E4BB00439DBC /* Nimander */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE7273C02586E4BC00439DBC /* Build configuration list for PBXNativeTarget "Nimander" */;
+			buildPhases = (
+				FE7273962586E4BB00439DBC /* Sources */,
+				FE7273972586E4BB00439DBC /* Frameworks */,
+				FE7273982586E4BB00439DBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nimander;
+			packageProductDependencies = (
+				FE7273D02586EC0600439DBC /* AppModels */,
+				FE7273D22586EC0600439DBC /* Core */,
+			);
+			productName = Nimander;
+			productReference = FE72739A2586E4BB00439DBC /* Nimander.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE7273AB2586E4BC00439DBC /* NimanderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE7273C32586E4BC00439DBC /* Build configuration list for PBXNativeTarget "NimanderTests" */;
+			buildPhases = (
+				FE7273A82586E4BC00439DBC /* Sources */,
+				FE7273A92586E4BC00439DBC /* Frameworks */,
+				FE7273AA2586E4BC00439DBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE7273AE2586E4BC00439DBC /* PBXTargetDependency */,
+			);
+			name = NimanderTests;
+			productName = NimanderTests;
+			productReference = FE7273AC2586E4BC00439DBC /* NimanderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE7273B62586E4BC00439DBC /* NimanderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE7273C62586E4BC00439DBC /* Build configuration list for PBXNativeTarget "NimanderUITests" */;
+			buildPhases = (
+				FE7273B32586E4BC00439DBC /* Sources */,
+				FE7273B42586E4BC00439DBC /* Frameworks */,
+				FE7273B52586E4BC00439DBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE7273B92586E4BC00439DBC /* PBXTargetDependency */,
+			);
+			name = NimanderUITests;
+			productName = NimanderUITests;
+			productReference = FE7273B72586E4BC00439DBC /* NimanderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE7273922586E4BB00439DBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					FE7273992586E4BB00439DBC = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					FE7273AB2586E4BC00439DBC = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = FE7273992586E4BB00439DBC;
+					};
+					FE7273B62586E4BC00439DBC = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = FE7273992586E4BB00439DBC;
+					};
+				};
+			};
+			buildConfigurationList = FE7273952586E4BB00439DBC /* Build configuration list for PBXProject "Nimander" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE7273912586E4BB00439DBC;
+			productRefGroup = FE72739B2586E4BB00439DBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE7273992586E4BB00439DBC /* Nimander */,
+				FE7273AB2586E4BC00439DBC /* NimanderTests */,
+				FE7273B62586E4BC00439DBC /* NimanderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE7273982586E4BB00439DBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7273A52586E4BC00439DBC /* Preview Assets.xcassets in Resources */,
+				FE7273A22586E4BC00439DBC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE7273AA2586E4BC00439DBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE7273B52586E4BC00439DBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE7273962586E4BB00439DBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7273F72588355A00439DBC /* BookmarkView.swift in Sources */,
+				FE7273E02588308F00439DBC /* BookmarkSidebar.swift in Sources */,
+				FE7273F22588352F00439DBC /* BookmarkListView.swift in Sources */,
+				FE7273E92588311F00439DBC /* BookmarkStore.swift in Sources */,
+				FE72739E2586E4BB00439DBC /* NimanderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE7273A82586E4BC00439DBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7273B12586E4BC00439DBC /* NimanderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE7273B32586E4BC00439DBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7273BC2586E4BC00439DBC /* NimanderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE7273AE2586E4BC00439DBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE7273992586E4BB00439DBC /* Nimander */;
+			targetProxy = FE7273AD2586E4BC00439DBC /* PBXContainerItemProxy */;
+		};
+		FE7273B92586E4BC00439DBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE7273992586E4BB00439DBC /* Nimander */;
+			targetProxy = FE7273B82586E4BC00439DBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FE7273BE2586E4BC00439DBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE7273BF2586E4BC00439DBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FE7273C12586E4BC00439DBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Nimander/Nimander.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Nimander/Preview Content\"";
+				DEVELOPMENT_TEAM = 3SLP9V722H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Nimander/Support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FE7273C22586E4BC00439DBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Nimander/Nimander.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Nimander/Preview Content\"";
+				DEVELOPMENT_TEAM = 3SLP9V722H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Nimander/Support/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FE7273C42586E4BC00439DBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3SLP9V722H;
+				INFOPLIST_FILE = NimanderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander.NimanderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nimander.app/Contents/MacOS/Nimander";
+			};
+			name = Debug;
+		};
+		FE7273C52586E4BC00439DBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3SLP9V722H;
+				INFOPLIST_FILE = NimanderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander.NimanderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nimander.app/Contents/MacOS/Nimander";
+			};
+			name = Release;
+		};
+		FE7273C72586E4BC00439DBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3SLP9V722H;
+				INFOPLIST_FILE = NimanderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander.NimanderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Nimander;
+			};
+			name = Debug;
+		};
+		FE7273C82586E4BC00439DBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3SLP9V722H;
+				INFOPLIST_FILE = NimanderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander.NimanderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Nimander;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE7273952586E4BB00439DBC /* Build configuration list for PBXProject "Nimander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE7273BE2586E4BC00439DBC /* Debug */,
+				FE7273BF2586E4BC00439DBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE7273C02586E4BC00439DBC /* Build configuration list for PBXNativeTarget "Nimander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE7273C12586E4BC00439DBC /* Debug */,
+				FE7273C22586E4BC00439DBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE7273C32586E4BC00439DBC /* Build configuration list for PBXNativeTarget "NimanderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE7273C42586E4BC00439DBC /* Debug */,
+				FE7273C52586E4BC00439DBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE7273C62586E4BC00439DBC /* Build configuration list for PBXNativeTarget "NimanderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE7273C72586E4BC00439DBC /* Debug */,
+				FE7273C82586E4BC00439DBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE7273D02586EC0600439DBC /* AppModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppModels;
+		};
+		FE7273D22586EC0600439DBC /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FE7273922586E4BB00439DBC /* Project object */;
+}
