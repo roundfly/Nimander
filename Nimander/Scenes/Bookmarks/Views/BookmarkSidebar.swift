@@ -24,7 +24,7 @@ struct BookmarkSidebar: View {
                         selectedBookmark: $selectedBookmark),
                     label: {
                         Label(title, systemImage: "bookmark").font(.headline)
-                })
+                    })
             }
         }
         .listStyle(SidebarListStyle())
