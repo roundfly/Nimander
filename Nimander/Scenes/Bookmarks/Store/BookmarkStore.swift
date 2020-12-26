@@ -21,4 +21,8 @@ final class BookmarkStore: ObservableObject {
             return []
         }()
     ]
+
+    func addFolder() {
+        
+    }
 }

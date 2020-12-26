@@ -23,10 +23,20 @@ struct BookmarkSidebar: View {
                         bookmarks: store.bookmarkFolders[title, default: []],
                         selectedBookmark: $selectedBookmark),
                     label: {
-                        Label(title, systemImage: "bookmark").font(.headline)
+                        Label(title, systemImage: "bookmark")
+                            .font(.headline)
                     })
             }
+            .listItemTint(Color.red)
         }
         .listStyle(SidebarListStyle())
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button(action: store.addFolder, label: {
+                    Image(systemName: "plus")
+                        .foregroundColor(.red)
+                })
+            }
+        }
     }
 }

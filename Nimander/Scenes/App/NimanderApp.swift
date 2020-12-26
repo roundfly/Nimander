@@ -29,9 +29,10 @@ struct NimanderApp: App {
                 if let bookmark = selectedBookmark {
                     BookmarkView(bookmark: bookmark)
                 }
-
             }
-        }.commands {
+        }
+        .windowStyle(HiddenTitleBarWindowStyle())
+        .commands {
             SidebarCommands()
         }
     }
