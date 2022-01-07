@@ -8,8 +8,8 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Core",
-            targets: ["Core"]),
+            name: "Parser",
+            targets: ["Parser"]),
         .library(
             name: "AppModels",
             targets: ["AppModels"]),
@@ -20,11 +20,11 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Core",
+            name: "Parser",
             dependencies: ["AppModels"]),
         .testTarget(
-            name: "CoreTests",
-            dependencies: ["Core"]),
+            name: "ParserTests",
+            dependencies: ["Parser"]),
         .target(
             name: "AppModels",
             dependencies: []),

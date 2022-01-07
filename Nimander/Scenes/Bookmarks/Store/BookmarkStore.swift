@@ -7,14 +7,14 @@
 
 import Foundation
 import AppModels
-import Core
+import Parser
 
 final class BookmarkStore: ObservableObject {
 
-    @Published var bookmarkFolders: [String: [Bookmark]] = [
-        "All": {
+    @Published var bookmarkFolders: [String: [SafariBookmark]] = [
+        "Safari": {
             do {
-                return try BookmarkParser<Safari, BookmarkList>().parseSafariPlist().all
+                return try BookmarkParser<Safari, SafariBookmarkList>().parseSafariPlist().all
             } catch {
                 print(error)
             }

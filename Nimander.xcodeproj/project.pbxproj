@@ -13,11 +13,11 @@
 		FE7273B12586E4BC00439DBC /* NimanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273B02586E4BC00439DBC /* NimanderTests.swift */; };
 		FE7273BC2586E4BC00439DBC /* NimanderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273BB2586E4BC00439DBC /* NimanderUITests.swift */; };
 		FE7273D12586EC0600439DBC /* AppModels in Frameworks */ = {isa = PBXBuildFile; productRef = FE7273D02586EC0600439DBC /* AppModels */; };
-		FE7273D32586EC0600439DBC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE7273D22586EC0600439DBC /* Core */; };
 		FE7273E02588308F00439DBC /* BookmarkSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */; };
 		FE7273E92588311F00439DBC /* BookmarkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273E82588311F00439DBC /* BookmarkStore.swift */; };
 		FE7273F22588352F00439DBC /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F12588352F00439DBC /* BookmarkListView.swift */; };
 		FE7273F72588355A00439DBC /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F62588355A00439DBC /* BookmarkView.swift */; };
+		FEEFD5902787CBD400180F74 /* Parser in Frameworks */ = {isa = PBXBuildFile; productRef = FEEFD58F2787CBD400180F74 /* Parser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7273D12586EC0600439DBC /* AppModels in Frameworks */,
-				FE7273D32586EC0600439DBC /* Core in Frameworks */,
+				FEEFD5902787CBD400180F74 /* Parser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +219,7 @@
 			name = Nimander;
 			packageProductDependencies = (
 				FE7273D02586EC0600439DBC /* AppModels */,
-				FE7273D22586EC0600439DBC /* Core */,
+				FEEFD58F2787CBD400180F74 /* Parser */,
 			);
 			productName = Nimander;
 			productReference = FE72739A2586E4BB00439DBC /* Nimander.app */;
@@ -498,7 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Nimander/Preview Content\"";
-				DEVELOPMENT_TEAM = 3SLP9V722H;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Nimander/Support/Info.plist;
@@ -522,7 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Nimander/Preview Content\"";
-				DEVELOPMENT_TEAM = 3SLP9V722H;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Nimander/Support/Info.plist;
@@ -667,9 +667,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = AppModels;
 		};
-		FE7273D22586EC0600439DBC /* Core */ = {
+		FEEFD58F2787CBD400180F74 /* Parser */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Core;
+			productName = Parser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

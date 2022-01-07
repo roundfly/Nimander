@@ -13,7 +13,7 @@ struct NimanderApp: App {
 
     @StateObject var store = BookmarkStore()
     @State private var selectedFolder: String? = "All"
-    @State private var selectedBookmark: Bookmark?
+    @State private var selectedBookmark: SafariBookmark?
 
     var body: some Scene {
         WindowGroup {

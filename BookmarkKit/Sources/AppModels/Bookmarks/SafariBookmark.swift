@@ -6,14 +6,14 @@
 //
 import Foundation
 
-public struct Bookmark: Decodable, Identifiable, Hashable {
+public struct SafariBookmark: Decodable, Identifiable, Hashable {
     public let id = UUID()
     public var title: String
     public var url: URL?
-    public var children: [Bookmark]
+    public var children: [SafariBookmark]
 
-    var all: [Bookmark] {
-        children + children.flatMap { $0.all }
+    var all: [SafariBookmark] {
+        children + children.flatMap(\.all)
     }
 
     enum CodingKeys: String, CodingKey {
@@ -22,7 +22,7 @@ public struct Bookmark: Decodable, Identifiable, Hashable {
         case children = "Children"
     }
 
-    public init(title: String, url: URL?, children: [Bookmark]) {
+    public init(title: String, url: URL?, children: [SafariBookmark]) {
         self.title = title
         self.url = url
         self.children = children
@@ -32,15 +32,15 @@ public struct Bookmark: Decodable, Identifiable, Hashable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.title = try container.decodeIfPresent([String: String].self, forKey: .title)?["title"] ?? "No title"
         self.url = URL(string: try container.decodeIfPresent(String.self, forKey: .url) ?? "")
-        self.children = try container.decodeIfPresent([Bookmark].self, forKey: .children) ?? []
+        self.children = try container.decodeIfPresent([SafariBookmark].self, forKey: .children) ?? []
     }
 }
 
-public struct BookmarkList: Decodable {
-    public var children: [Bookmark]
+public struct SafariBookmarkList: Decodable {
+    public var children: [SafariBookmark]
 
-    public var all: [Bookmark] {
-        children + children.flatMap { $0.all }
+    public var all: [SafariBookmark] {
+        children + children.flatMap(\.all)
     }
 
     enum CodingKeys: String, CodingKey {
@@ -49,6 +49,6 @@ public struct BookmarkList: Decodable {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.children = try container.decode([Bookmark].self, forKey: .children)
+        self.children = try container.decode([SafariBookmark].self, forKey: .children)
     }
 }

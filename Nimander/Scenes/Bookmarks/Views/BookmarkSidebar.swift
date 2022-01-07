@@ -12,7 +12,7 @@ struct BookmarkSidebar: View {
 
     @ObservedObject var store: BookmarkStore
     @Binding var selectedFolder: String?
-    @Binding var selectedBookmark: Bookmark?
+    @Binding var selectedBookmark: SafariBookmark?
 
     var body: some View {
         List(selection: $selectedFolder) {
@@ -21,10 +21,10 @@ struct BookmarkSidebar: View {
                     destination: BookmarkListView(
                         title: title,
                         bookmarks: store.bookmarkFolders[title, default: []],
-                        selectedBookmark: $selectedBookmark),
+                        selectedBookmark: $selectedBookmark
+                    ),
                     label: {
-                        Label(title, systemImage: "bookmark")
-                            .font(.headline)
+                        Label(title, systemImage: "bookmark").font(.headline)
                     })
             }
             .listItemTint(Color.red)

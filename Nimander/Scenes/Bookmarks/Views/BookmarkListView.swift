@@ -10,8 +10,8 @@ import AppModels
 
 struct BookmarkListView: View {
     let title: String
-    let bookmarks: [Bookmark]
-    @Binding var selectedBookmark: Bookmark?
+    let bookmarks: [SafariBookmark]
+    @Binding var selectedBookmark: SafariBookmark?
 
     var body: some View {
         List(selection: $selectedBookmark) {
