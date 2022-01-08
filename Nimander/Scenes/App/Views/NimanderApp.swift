@@ -10,10 +10,9 @@ import AppModels
 
 @main
 struct NimanderApp: App {
-
     @StateObject var store = BookmarkStore()
-    @State private var selectedFolder: String? = "All"
-    @State private var selectedBookmark: SafariBookmark?
+    @State private var selectedFolder: String?
+    @State private var selectedBookmark: Bookmark?
 
     var body: some Scene {
         WindowGroup {

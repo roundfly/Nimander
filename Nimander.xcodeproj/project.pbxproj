@@ -17,8 +17,7 @@
 		FE7273E92588311F00439DBC /* BookmarkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273E82588311F00439DBC /* BookmarkStore.swift */; };
 		FE7273F22588352F00439DBC /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F12588352F00439DBC /* BookmarkListView.swift */; };
 		FE7273F72588355A00439DBC /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F62588355A00439DBC /* BookmarkView.swift */; };
-		FEEFD5902787CBD400180F74 /* Parser in Frameworks */ = {isa = PBXBuildFile; productRef = FEEFD58F2787CBD400180F74 /* Parser */; };
-		FEEFD5932787D1E100180F74 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FEEFD5922787D1E100180F74 /* ComposableArchitecture */; };
+		FE8EA1202788CA81008BBCCD /* BookmarkClient in Frameworks */ = {isa = PBXBuildFile; productRef = FE8EA11F2788CA81008BBCCD /* BookmarkClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +54,7 @@
 		FE7273E82588311F00439DBC /* BookmarkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkStore.swift; sourceTree = "<group>"; };
 		FE7273F12588352F00439DBC /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		FE7273F62588355A00439DBC /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		FEEFD5972787D89F00180F74 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7273D12586EC0600439DBC /* AppModels in Frameworks */,
-				FEEFD5902787CBD400180F74 /* Parser in Frameworks */,
-				FEEFD5932787D1E100180F74 /* ComposableArchitecture in Frameworks */,
+				FE8EA1202788CA81008BBCCD /* BookmarkClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +145,7 @@
 		FE7273CF2586EC0600439DBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEEFD5972787D89F00180F74 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 		FE7273D62586EC4C00439DBC /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FE72739D2586E4BB00439DBC /* NimanderApp.swift */,
+				FE8EA11C2788C6F8008BBCCD /* Views */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -203,6 +203,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		FE8EA11C2788C6F8008BBCCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE72739D2586E4BB00439DBC /* NimanderApp.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,8 +229,7 @@
 			name = Nimander;
 			packageProductDependencies = (
 				FE7273D02586EC0600439DBC /* AppModels */,
-				FEEFD58F2787CBD400180F74 /* Parser */,
-				FEEFD5922787D1E100180F74 /* ComposableArchitecture */,
+				FE8EA11F2788CA81008BBCCD /* BookmarkClient */,
 			);
 			productName = Nimander;
 			productReference = FE72739A2586E4BB00439DBC /* Nimander.app */;
@@ -296,7 +303,6 @@
 			);
 			mainGroup = FE7273912586E4BB00439DBC;
 			packageReferences = (
-				FEEFD5912787D1E100180F74 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = FE72739B2586E4BB00439DBC /* Products */;
 			projectDirPath = "";
@@ -512,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -536,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -668,30 +674,14 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		FEEFD5912787D1E100180F74 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
 		FE7273D02586EC0600439DBC /* AppModels */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppModels;
 		};
-		FEEFD58F2787CBD400180F74 /* Parser */ = {
+		FE8EA11F2788CA81008BBCCD /* BookmarkClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Parser;
-		};
-		FEEFD5922787D1E100180F74 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FEEFD5912787D1E100180F74 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
+			productName = BookmarkClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

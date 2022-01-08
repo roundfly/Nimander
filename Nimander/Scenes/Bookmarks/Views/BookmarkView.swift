@@ -11,7 +11,7 @@ import WebKit
 import AppModels
 
 struct BookmarkView: View {
-    let bookmark: SafariBookmark
+    let bookmark: Bookmark
 
     var body: some View {
         if let url = bookmark.url {

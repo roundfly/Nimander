@@ -7,14 +7,26 @@
 
 import Foundation
 import AppModels
-import Parser
+import BookmarkClient
 
 final class BookmarkStore: ObservableObject {
 
-    @Published var bookmarkFolders: [String: [SafariBookmark]] = [
+    var browsers: [String] {
+        Array(bookmarkFolders.keys)
+    }
+
+    @Published var bookmarkFolders: [String: [Bookmark]] = [
         "Safari": {
             do {
-                return try BookmarkParser<Safari, SafariBookmarkList>().parseSafariPlist().all
+                return try BookmarkClient().load(for: .safari)
+            } catch {
+                print(error)
+            }
+            return []
+        }(),
+        "Google": {
+            do {
+                return try BookmarkClient().load(for: .google)
             } catch {
                 print(error)
             }

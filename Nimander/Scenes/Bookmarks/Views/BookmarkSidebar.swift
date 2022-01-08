@@ -12,11 +12,11 @@ struct BookmarkSidebar: View {
 
     @ObservedObject var store: BookmarkStore
     @Binding var selectedFolder: String?
-    @Binding var selectedBookmark: SafariBookmark?
+    @Binding var selectedBookmark: Bookmark?
 
     var body: some View {
         List(selection: $selectedFolder) {
-            ForEach(Array(store.bookmarkFolders.keys), id: \.self) { title in
+            ForEach(Array(store.browsers), id: \.self) { title in
                 NavigationLink(
                     destination: BookmarkListView(
                         title: title,
