@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import AppModels
 import BookmarkClient
 
 final class BookmarkStore: ObservableObject {

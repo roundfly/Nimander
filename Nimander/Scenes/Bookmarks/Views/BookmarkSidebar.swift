@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AppModels
+import BookmarkClient
 
 struct BookmarkSidebar: View {
 

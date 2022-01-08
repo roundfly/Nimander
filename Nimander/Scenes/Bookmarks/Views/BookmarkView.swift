@@ -8,7 +8,7 @@
 import SwiftUI
 import AppKit
 import WebKit
-import AppModels
+import BookmarkClient
 
 struct BookmarkView: View {
     let bookmark: Bookmark

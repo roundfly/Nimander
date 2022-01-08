@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct SafariBookmark: Decodable, Identifiable, Hashable {
+struct SafariBookmark: Decodable {
     let id = UUID()
     var title: String
     var url: URL?

@@ -12,7 +12,6 @@
 		FE7273A52586E4BC00439DBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7273A42586E4BC00439DBC /* Preview Assets.xcassets */; };
 		FE7273B12586E4BC00439DBC /* NimanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273B02586E4BC00439DBC /* NimanderTests.swift */; };
 		FE7273BC2586E4BC00439DBC /* NimanderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273BB2586E4BC00439DBC /* NimanderUITests.swift */; };
-		FE7273D12586EC0600439DBC /* AppModels in Frameworks */ = {isa = PBXBuildFile; productRef = FE7273D02586EC0600439DBC /* AppModels */; };
 		FE7273E02588308F00439DBC /* BookmarkSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */; };
 		FE7273E92588311F00439DBC /* BookmarkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273E82588311F00439DBC /* BookmarkStore.swift */; };
 		FE7273F22588352F00439DBC /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F12588352F00439DBC /* BookmarkListView.swift */; };
@@ -62,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7273D12586EC0600439DBC /* AppModels in Frameworks */,
 				FE8EA1202788CA81008BBCCD /* BookmarkClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +226,6 @@
 			);
 			name = Nimander;
 			packageProductDependencies = (
-				FE7273D02586EC0600439DBC /* AppModels */,
 				FE8EA11F2788CA81008BBCCD /* BookmarkClient */,
 			);
 			productName = Nimander;
@@ -675,10 +672,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FE7273D02586EC0600439DBC /* AppModels */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AppModels;
-		};
 		FE8EA11F2788CA81008BBCCD /* BookmarkClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BookmarkClient;

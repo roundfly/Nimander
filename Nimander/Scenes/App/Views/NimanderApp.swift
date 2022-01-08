@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AppModels
+import BookmarkClient
 
 @main
 struct NimanderApp: App {

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import AppModels
 
 public struct BookmarkSource: OptionSet {
     public var rawValue: Int

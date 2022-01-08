@@ -10,9 +10,6 @@ let package = Package(
         .library(
             name: "BookmarkClient",
             targets: ["BookmarkClient"]),
-        .library(
-            name: "AppModels",
-            targets: ["AppModels"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,15 +18,9 @@ let package = Package(
     targets: [
         .target(
             name: "BookmarkClient",
-            dependencies: ["AppModels"]),
-        .testTarget(
-            name: "BookmarkClientTests",
-            dependencies: ["BookmarkClient"]),
-        .target(
-            name: "AppModels",
             dependencies: []),
         .testTarget(
-            name: "AppModelsTests",
-            dependencies: ["AppModels"])
+            name: "BookmarkClientTests",
+            dependencies: ["BookmarkClient"])
     ]
 )

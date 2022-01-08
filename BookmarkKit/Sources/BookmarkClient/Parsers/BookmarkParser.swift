@@ -5,7 +5,6 @@
 //  Created by Nikola Stojanovic on 14.12.20..
 //
 import Foundation
-import AppModels
 
 struct Parser {
     var parse: (Data) throws -> [Bookmark]
