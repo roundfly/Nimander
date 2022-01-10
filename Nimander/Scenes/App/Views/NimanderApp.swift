@@ -19,15 +19,15 @@ struct NimanderApp: App {
                 NavigationView {
                     BookmarkSidebar()
                     if let folder = viewModel.selectedFolder.wrappedValue {
-                        BookmarkListView(bookmarks: viewModel.state.folders[folder, default: []])
+                        BookmarkListView(bookmarks: viewModel.folders[folder, default: []])
                     }
                     if let bookmark = viewModel.selectedBookmark.wrappedValue {
                         BookmarkView(bookmark: bookmark)
                     }
                 }
-                .sheet(isPresented: viewModel.requestAuthorization, onDismiss: { dismiss() }) {
-                    RequestAuthorizationView()
-                }
+                .sheet(isPresented: viewModel.requestAuthorization,
+                       onDismiss: { dismiss() },
+                       content: RequestAuthorizationDialog.init)
                 .environmentObject(viewModel)
 
         }

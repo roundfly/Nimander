@@ -23,7 +23,7 @@
 		FE9A8929278A20AF001C95D7 /* BookmarkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A8928278A20AF001C95D7 /* BookmarkState.swift */; };
 		FE9A892B278A2574001C95D7 /* BookmarkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A892A278A2574001C95D7 /* BookmarkAction.swift */; };
 		FE9A892D278A269B001C95D7 /* BookmarkReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A892C278A269B001C95D7 /* BookmarkReducer.swift */; };
-		FEEDF3B4278BB8600088EA52 /* RequestAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEDF3B3278BB8600088EA52 /* RequestAuthorizationView.swift */; };
+		FEEDF3B4278BB8600088EA52 /* RequestAuthorizationDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEDF3B3278BB8600088EA52 /* RequestAuthorizationDialog.swift */; };
 		FEEDF3B7278BB8E70088EA52 /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEDF3B6278BB8E70088EA52 /* NSImage+Extensions.swift */; };
 		FEEDF3B9278BC5940088EA52 /* BookmarkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEDF3B8278BC5940088EA52 /* BookmarkEnvironment.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +68,7 @@
 		FE9A8928278A20AF001C95D7 /* BookmarkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkState.swift; sourceTree = "<group>"; };
 		FE9A892A278A2574001C95D7 /* BookmarkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkAction.swift; sourceTree = "<group>"; };
 		FE9A892C278A269B001C95D7 /* BookmarkReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkReducer.swift; sourceTree = "<group>"; };
-		FEEDF3B3278BB8600088EA52 /* RequestAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuthorizationView.swift; sourceTree = "<group>"; };
+		FEEDF3B3278BB8600088EA52 /* RequestAuthorizationDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuthorizationDialog.swift; sourceTree = "<group>"; };
 		FEEDF3B6278BB8E70088EA52 /* NSImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extensions.swift"; sourceTree = "<group>"; };
 		FEEDF3B8278BC5940088EA52 /* BookmarkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkEnvironment.swift; sourceTree = "<group>"; };
 		FEEFD5972787D89F00180F74 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -210,7 +210,7 @@
 				FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */,
 				FE7273F12588352F00439DBC /* BookmarkListView.swift */,
 				FE7273F62588355A00439DBC /* BookmarkView.swift */,
-				FEEDF3B3278BB8600088EA52 /* RequestAuthorizationView.swift */,
+				FEEDF3B3278BB8600088EA52 /* RequestAuthorizationDialog.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 			files = (
 				FE7273F72588355A00439DBC /* BookmarkView.swift in Sources */,
 				FE9A8920278A1C8B001C95D7 /* URL+Extensions.swift in Sources */,
-				FEEDF3B4278BB8600088EA52 /* RequestAuthorizationView.swift in Sources */,
+				FEEDF3B4278BB8600088EA52 /* RequestAuthorizationDialog.swift in Sources */,
 				FE7273E02588308F00439DBC /* BookmarkSidebar.swift in Sources */,
 				FE9A892D278A269B001C95D7 /* BookmarkReducer.swift in Sources */,
 				FE9A892B278A2574001C95D7 /* BookmarkAction.swift in Sources */,

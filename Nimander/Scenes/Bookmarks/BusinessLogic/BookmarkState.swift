@@ -11,6 +11,12 @@ import BookmarkClient
 
 typealias Folders = [Browser: [Bookmark]]
 
+extension Folders {
+    var areIncomplete: Bool {
+        self[.safari]?.isEmpty == true || self[.google]?.isEmpty == true
+    }
+}
+
 /// App state
 struct BookmarkState {
     var folders: Folders

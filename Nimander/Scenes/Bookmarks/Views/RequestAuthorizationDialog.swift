@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(macOS 12.0, *)
-struct RequestAuthorizationView: View {
+struct RequestAuthorizationDialog: View {
     @EnvironmentObject var viewModel: BookmarkViewModel
 
     var body: some View {

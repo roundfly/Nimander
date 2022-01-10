@@ -42,9 +42,10 @@ extension BookmarkViewModel {
 
     static var production: BookmarkViewModel {
         let folders: Folders = [.safari: load(from: .safari), .google: load(from: .google)]
-        let didFail: Bool = (folders[.safari]?.isEmpty == true) || (folders[.google]?.isEmpty == true)
+        let didFail: Bool = folders.areIncomplete
         return Self(
-            state: BookmarkState(folders: folders, requestAuthorization: didFail),
+            state: BookmarkState(folders: folders,
+                                 requestAuthorization: didFail),
             environment: .production,
             reducer: bookmarkReducer
         )
@@ -52,6 +53,10 @@ extension BookmarkViewModel {
 
     var browsers: [Browser] {
         Browser.allCases
+    }
+
+    var folders: Folders {
+        state.folders
     }
 
     var selectedFolder: Binding<Browser?> {
