@@ -8,27 +8,28 @@
 import SwiftUI
 import BookmarkClient
 
+@available(macOS 12.0, *)
 @main
 struct NimanderApp: App {
-    @StateObject var store = BookmarkStore()
-    @State private var selectedFolder: String?
-    @State private var selectedBookmark: Bookmark?
+    @StateObject private var viewModel: BookmarkViewModel = .production
+    @Environment(\.dismiss) var dismiss
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                BookmarkSidebar(store: store,
-                                selectedFolder: $selectedFolder,
-                                selectedBookmark: $selectedBookmark)
-                if let folder = selectedFolder {
-                    BookmarkListView(title: folder,
-                                     bookmarks: store.bookmarkFolders[folder, default: []],
-                                     selectedBookmark: $selectedBookmark)
+                NavigationView {
+                    BookmarkSidebar()
+                    if let folder = viewModel.selectedFolder.wrappedValue {
+                        BookmarkListView(bookmarks: viewModel.state.folders[folder, default: []])
+                    }
+                    if let bookmark = viewModel.selectedBookmark.wrappedValue {
+                        BookmarkView(bookmark: bookmark)
+                    }
                 }
-                if let bookmark = selectedBookmark {
-                    BookmarkView(bookmark: bookmark)
+                .sheet(isPresented: viewModel.requestAuthorization, onDismiss: { dismiss() }) {
+                    RequestAuthorizationView()
                 }
-            }
+                .environmentObject(viewModel)
+
         }
         .windowStyle(HiddenTitleBarWindowStyle())
         .commands {

@@ -13,10 +13,19 @@
 		FE7273B12586E4BC00439DBC /* NimanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273B02586E4BC00439DBC /* NimanderTests.swift */; };
 		FE7273BC2586E4BC00439DBC /* NimanderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273BB2586E4BC00439DBC /* NimanderUITests.swift */; };
 		FE7273E02588308F00439DBC /* BookmarkSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */; };
-		FE7273E92588311F00439DBC /* BookmarkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273E82588311F00439DBC /* BookmarkStore.swift */; };
+		FE7273E92588311F00439DBC /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273E82588311F00439DBC /* BookmarkViewModel.swift */; };
 		FE7273F22588352F00439DBC /* BookmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F12588352F00439DBC /* BookmarkListView.swift */; };
 		FE7273F72588355A00439DBC /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7273F62588355A00439DBC /* BookmarkView.swift */; };
 		FE8EA1202788CA81008BBCCD /* BookmarkClient in Frameworks */ = {isa = PBXBuildFile; productRef = FE8EA11F2788CA81008BBCCD /* BookmarkClient */; };
+		FE9A8920278A1C8B001C95D7 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A891F278A1C8B001C95D7 /* URL+Extensions.swift */; };
+		FE9A8923278A1DCE001C95D7 /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A8922278A1DCE001C95D7 /* URLOpener.swift */; };
+		FE9A8927278A2046001C95D7 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A8926278A2046001C95D7 /* Browser.swift */; };
+		FE9A8929278A20AF001C95D7 /* BookmarkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A8928278A20AF001C95D7 /* BookmarkState.swift */; };
+		FE9A892B278A2574001C95D7 /* BookmarkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A892A278A2574001C95D7 /* BookmarkAction.swift */; };
+		FE9A892D278A269B001C95D7 /* BookmarkReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9A892C278A269B001C95D7 /* BookmarkReducer.swift */; };
+		FEEDF3B4278BB8600088EA52 /* RequestAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEDF3B3278BB8600088EA52 /* RequestAuthorizationView.swift */; };
+		FEEDF3B7278BB8E70088EA52 /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEDF3B6278BB8E70088EA52 /* NSImage+Extensions.swift */; };
+		FEEDF3B9278BC5940088EA52 /* BookmarkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEDF3B8278BC5940088EA52 /* BookmarkEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +59,18 @@
 		FE7273BB2586E4BC00439DBC /* NimanderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimanderUITests.swift; sourceTree = "<group>"; };
 		FE7273BD2586E4BC00439DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkSidebar.swift; sourceTree = "<group>"; };
-		FE7273E82588311F00439DBC /* BookmarkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkStore.swift; sourceTree = "<group>"; };
+		FE7273E82588311F00439DBC /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		FE7273F12588352F00439DBC /* BookmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkListView.swift; sourceTree = "<group>"; };
 		FE7273F62588355A00439DBC /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		FE9A891F278A1C8B001C95D7 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		FE9A8922278A1DCE001C95D7 /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
+		FE9A8926278A2046001C95D7 /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
+		FE9A8928278A20AF001C95D7 /* BookmarkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkState.swift; sourceTree = "<group>"; };
+		FE9A892A278A2574001C95D7 /* BookmarkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkAction.swift; sourceTree = "<group>"; };
+		FE9A892C278A269B001C95D7 /* BookmarkReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkReducer.swift; sourceTree = "<group>"; };
+		FEEDF3B3278BB8600088EA52 /* RequestAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAuthorizationView.swift; sourceTree = "<group>"; };
+		FEEDF3B6278BB8E70088EA52 /* NSImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extensions.swift"; sourceTree = "<group>"; };
+		FEEDF3B8278BC5940088EA52 /* BookmarkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkEnvironment.swift; sourceTree = "<group>"; };
 		FEEFD5972787D89F00180F74 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -169,6 +187,7 @@
 		FE7273D62586EC4C00439DBC /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FEEDF3B5278BB8DB0088EA52 /* Extensions */,
 				FE8EA11C2788C6F8008BBCCD /* Views */,
 			);
 			path = App;
@@ -177,7 +196,9 @@
 		FE7273D72586EC7F00439DBC /* Bookmarks */ = {
 			isa = PBXGroup;
 			children = (
-				FE7273E72588311500439DBC /* Store */,
+				FE9A8925278A203B001C95D7 /* Models */,
+				FE9A8924278A201B001C95D7 /* BusinessLogic */,
+				FE9A8921278A1DB6001C95D7 /* URLHandling */,
 				FE7273DE2588308000439DBC /* Views */,
 			);
 			path = Bookmarks;
@@ -189,16 +210,9 @@
 				FE7273DF2588308F00439DBC /* BookmarkSidebar.swift */,
 				FE7273F12588352F00439DBC /* BookmarkListView.swift */,
 				FE7273F62588355A00439DBC /* BookmarkView.swift */,
+				FEEDF3B3278BB8600088EA52 /* RequestAuthorizationView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FE7273E72588311500439DBC /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				FE7273E82588311F00439DBC /* BookmarkStore.swift */,
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		FE8EA11C2788C6F8008BBCCD /* Views */ = {
@@ -207,6 +221,43 @@
 				FE72739D2586E4BB00439DBC /* NimanderApp.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FE9A8921278A1DB6001C95D7 /* URLHandling */ = {
+			isa = PBXGroup;
+			children = (
+				FE9A891F278A1C8B001C95D7 /* URL+Extensions.swift */,
+				FE9A8922278A1DCE001C95D7 /* URLOpener.swift */,
+			);
+			path = URLHandling;
+			sourceTree = "<group>";
+		};
+		FE9A8924278A201B001C95D7 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				FE7273E82588311F00439DBC /* BookmarkViewModel.swift */,
+				FE9A8928278A20AF001C95D7 /* BookmarkState.swift */,
+				FE9A892A278A2574001C95D7 /* BookmarkAction.swift */,
+				FE9A892C278A269B001C95D7 /* BookmarkReducer.swift */,
+				FEEDF3B8278BC5940088EA52 /* BookmarkEnvironment.swift */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		FE9A8925278A203B001C95D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE9A8926278A2046001C95D7 /* Browser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FEEDF3B5278BB8DB0088EA52 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FEEDF3B6278BB8E70088EA52 /* NSImage+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,10 +395,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7273F72588355A00439DBC /* BookmarkView.swift in Sources */,
+				FE9A8920278A1C8B001C95D7 /* URL+Extensions.swift in Sources */,
+				FEEDF3B4278BB8600088EA52 /* RequestAuthorizationView.swift in Sources */,
 				FE7273E02588308F00439DBC /* BookmarkSidebar.swift in Sources */,
+				FE9A892D278A269B001C95D7 /* BookmarkReducer.swift in Sources */,
+				FE9A892B278A2574001C95D7 /* BookmarkAction.swift in Sources */,
 				FE7273F22588352F00439DBC /* BookmarkListView.swift in Sources */,
-				FE7273E92588311F00439DBC /* BookmarkStore.swift in Sources */,
+				FE9A8929278A20AF001C95D7 /* BookmarkState.swift in Sources */,
+				FE9A8927278A2046001C95D7 /* Browser.swift in Sources */,
+				FE7273E92588311F00439DBC /* BookmarkViewModel.swift in Sources */,
+				FEEDF3B7278BB8E70088EA52 /* NSImage+Extensions.swift in Sources */,
+				FEEDF3B9278BC5940088EA52 /* BookmarkEnvironment.swift in Sources */,
 				FE72739E2586E4BB00439DBC /* NimanderApp.swift in Sources */,
+				FE9A8923278A1DCE001C95D7 /* URLOpener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +575,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -539,7 +599,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codecentric.Nimander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -6,54 +6,58 @@
 //
 
 import Foundation
+import UserNotifications
+import AppKit
 
-public struct BookmarkSource: OptionSet {
-    public var rawValue: Int
-
-    public init(rawValue: Int) {
-        self.rawValue = rawValue
-    }
-
-    public static let safari = BookmarkSource(rawValue: 1 << 0)
-    public static let google = BookmarkSource(rawValue: 1 << 1)
+public enum BookmarkLoadingError: Error {
+    case nonElevatedAccessControl
 }
 
 public struct BookmarkClient {
-
+    // MARK: - Instance variables
     private let safariPath = "Library/Safari/Bookmarks.plist"
     private let googlePath = "Library/Application Support/Google/Chrome/Default/Bookmarks"
     private let fileManager: FileManager
 
-    private var googleData: Data {
-        guard let data = fileManager.contents(atPath: homeDirectory(with: googlePath)) else { preconditionFailure() }
-        return data
-    }
-
-    private var safariData: Data {
-        guard let data = fileManager.contents(atPath: homeDirectory(with: safariPath)) else { preconditionFailure() }
-        return data
-    }
+    // MARK: - Initialization
 
     public init(fileManager: FileManager = .default) {
         self.fileManager = fileManager
     }
 
+    // MARK: - API
+
     public func load(for source: BookmarkSource) throws -> [Bookmark] {
-        let safariParser: Parser = .safari
-        let googleParser: Parser = .google
+        let safariParser: Parser = .safari, googleParser: Parser = .google
         if source.contains(.google) && source.contains(.safari) {
-            return try googleParser.parse(googleData) + safariParser.parse(safariData)
+            return try googleParser.parse(try readGoogleData()) + safariParser.parse(try readSafariData())
         }
         else if source.contains(.google) {
-            return try googleParser.parse(googleData)
+            return try googleParser.parse(try readGoogleData())
         }
         else if source.contains(.safari) {
-            return try safariParser.parse(safariData)
+            return try safariParser.parse(try readSafariData())
         }
         return []
     }
 
+    // MARK: - Implementation details
+
     private func homeDirectory(with path: String) -> String {
         "\(NSHomeDirectory())/\(path)"
+    }
+
+    func readGoogleData() throws -> Data {
+        guard let data = fileManager.contents(atPath: homeDirectory(with: googlePath)) else {
+            throw BookmarkLoadingError.nonElevatedAccessControl
+        }
+        return data
+    }
+
+    func readSafariData() throws -> Data {
+        guard let data = fileManager.contents(atPath: homeDirectory(with: safariPath)) else {
+            throw BookmarkLoadingError.nonElevatedAccessControl
+        }
+        return data
     }
 }

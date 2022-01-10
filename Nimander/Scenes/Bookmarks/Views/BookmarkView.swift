@@ -17,7 +17,7 @@ struct BookmarkView: View {
         if let url = bookmark.url {
             BookmarkWebView(url: url)
         } else {
-            Text("Could not perform request")
+            EmptyView()
         }
     }
 }

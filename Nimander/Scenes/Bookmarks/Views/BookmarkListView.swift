@@ -8,25 +8,31 @@
 import SwiftUI
 import BookmarkClient
 
+@available(macOS 12.0, *)
 struct BookmarkListView: View {
-    let title: String
+    @EnvironmentObject var viewModel: BookmarkViewModel
     let bookmarks: [Bookmark]
-    @Binding var selectedBookmark: Bookmark?
 
     var body: some View {
-        List(selection: $selectedBookmark) {
+        List(selection: viewModel.selectedBookmark) {
             ForEach(bookmarks) { bookmark in
                 NavigationLink(
                     destination: BookmarkView(bookmark: bookmark),
                     tag: bookmark,
-                    selection: $selectedBookmark,
+                    selection: viewModel.selectedBookmark,
                     label: {
                         VStack(alignment: .leading) {
-                            Text(bookmark.title)
-                            Text(bookmark.url?.absoluteString ?? "")
+                            title(of: bookmark)
                         }
                     })
             }
         }
+    }
+
+    private func title(of bookmark: Bookmark) -> some View {
+        Text(bookmark.title)
+            .font(.title2)
+            .multilineTextAlignment(.leading)
+            .padding()
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os.log
 
 typealias JSON = [String: Any]
 
@@ -15,6 +16,7 @@ struct ChromeBookmarkList {
         var title: String
         var url: URL?
     }
+    let logger = Logger(subsystem: "nimander", category: "json")
     var bookmarks: [ChromeBookmark]
 
     init?(from json: JSON) {
@@ -23,7 +25,7 @@ struct ChromeBookmarkList {
             let bookmarkBar = roots["bookmark_bar"] as? JSON,
             let children = bookmarkBar["children"] as? [JSON]
         else {
-            print("Failed decoding json")
+            logger.error("Failed decoding Chrome json")
             return nil
         }
         bookmarks = children.compactMap({ json in

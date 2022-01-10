@@ -8,35 +8,23 @@
 import SwiftUI
 import BookmarkClient
 
+@available(macOS 12.0, *)
 struct BookmarkSidebar: View {
-
-    @ObservedObject var store: BookmarkStore
-    @Binding var selectedFolder: String?
-    @Binding var selectedBookmark: Bookmark?
+    @EnvironmentObject var viewModel: BookmarkViewModel
 
     var body: some View {
-        List(selection: $selectedFolder) {
-            ForEach(Array(store.browsers), id: \.self) { title in
-                NavigationLink(
-                    destination: BookmarkListView(
-                        title: title,
-                        bookmarks: store.bookmarkFolders[title, default: []],
-                        selectedBookmark: $selectedBookmark
-                    ),
-                    label: {
-                        Label(title, systemImage: "bookmark").font(.headline)
-                    })
+        List(selection: viewModel.selectedFolder) {
+            Section("Browsers") {
+                ForEach(viewModel.browsers) { browser in
+                    NavigationLink(
+                        destination: BookmarkListView(bookmarks: viewModel.state.folders[browser, default: []]),
+                        label: {
+                            Label(browser.name, systemImage: browser.symbolName).font(.headline)
+                        })
+                }
             }
-            .listItemTint(Color.red)
+            .listItemTint(.red)
         }
         .listStyle(SidebarListStyle())
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: store.addFolder, label: {
-                    Image(systemName: "plus")
-                        .foregroundColor(.red)
-                })
-            }
-        }
     }
 }

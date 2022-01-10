@@ -22,5 +22,7 @@
 	<string>public.app-category.developer-tools</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+    <key>NSSystemAdministrationUsageDescription</key>
+    <string>Managing bookmarks via Nimander requires elevation to be executed</string>
 </dict>
 </plist>
