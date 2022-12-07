@@ -16,8 +16,6 @@ struct BookmarkView: View {
     var body: some View {
         if let url = bookmark.url {
             BookmarkWebView(url: url)
-        } else {
-            EmptyView()
         }
     }
 }
