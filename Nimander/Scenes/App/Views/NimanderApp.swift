@@ -8,23 +8,15 @@
 import SwiftUI
 import BookmarkClient
 
-@available(macOS 12.0, *)
 @main
 struct NimanderApp: App {
     @StateObject private var viewModel: BookmarkViewModel = .production
+    @State private var visibility: NavigationSplitViewVisibility = .all
     @Environment(\.dismiss) var dismiss
 
     var body: some Scene {
         WindowGroup {
-                NavigationView {
-                    BookmarkSidebar()
-                    if let folder = viewModel.selectedFolder.wrappedValue {
-                        BookmarkListView(bookmarks: viewModel.folders[folder, default: []])
-                    }
-                    if let bookmark = viewModel.selectedBookmark.wrappedValue {
-                        BookmarkView(bookmark: bookmark)
-                    }
-                }
+            splitView
                 .sheet(isPresented: viewModel.requestAuthorization,
                        onDismiss: { dismiss() },
                        content: RequestAuthorizationDialog.init)
@@ -35,5 +27,20 @@ struct NimanderApp: App {
         .commands {
             SidebarCommands()
         }
+    }
+
+    private var splitView: some View {
+        NavigationSplitView(columnVisibility: $visibility) {
+            BookmarkSidebar()
+        } content: {
+            if let folder = viewModel.selectedFolder.wrappedValue {
+                BookmarkListView(bookmarks: viewModel.folders[folder, default: []])
+            }
+        } detail: {
+            if let bookmark = viewModel.selectedBookmark.wrappedValue {
+                BookmarkView(bookmark: bookmark)
+            }
+        }
+
     }
 }

@@ -8,7 +8,6 @@
 import SwiftUI
 import BookmarkClient
 
-@available(macOS 12.0, *)
 struct BookmarkSidebar: View {
     @EnvironmentObject var viewModel: BookmarkViewModel
 
